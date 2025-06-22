@@ -1,36 +1,32 @@
-# 📝 Svelte Notes App
+# 📝 Notes App – Svelte Frontend Internship Challenge
 
-This is a simple and responsive notes manager built with **Svelte** and **TailwindCSS**, designed for the InLabels frontend internship challenge.
-
-Users can:
-- View all notes
-- Create new notes
-- Edit existing notes
-- Delete notes
-
-All actions interact with a real mock API using `fetch`.
+A simple Notes app built with **Svelte** and **TailwindCSS** that lets users create, edit, delete, and view notes using a mock API.
 
 ---
 
 ## 🚀 Live Demo
 
-- https://notes-app-challenge-hu2z.vercel.app/
+👉 https://notes-app-challenge-hu2z.vercel.app/
 
 ---
 
-## 🛠️ Tech Stack
+## 🧰 Tech Stack
 
-- [Svelte](https://svelte.dev/) – Component Framework
-- [TailwindCSS](https://tailwindcss.com/) – Utility-first styling
-- [MockAPI.io](https://mockapi.io/) – Fake REST API
-- Fetch API for async operations
+- Svelte (Vite)
+- TailwindCSS
+- MockAPI (https://mockapi.io)
+- @zerodevx/svelte-toast (toast notifications)
 
 ---
 
-## 📦 How to Run Locally
+## ⚙️ How to Run the App
 
 ```bash
+# Clone the repository
 git clone https://github.com/Jaydeeprawat17/notes-app-svelte.git
-cd notes-app-svelte
+
+# Install dependencies
 npm install
+
+# Start dev server
 npm run dev
