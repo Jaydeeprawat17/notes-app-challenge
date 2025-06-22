@@ -1,5 +1,5 @@
 <script>
-     import toast from 'svelte-french-toast';
+     import { toast } from '@zerodevx/svelte-toast';
 
      export let note;
 export let onDelete;
@@ -26,7 +26,7 @@ let saving = false;
          isEditing = false;
         
        } catch (err) {
-          toast.error('Failed to update!');
+          toast.push('Failed to update!');
          console.error(err);
        } finally {
          saving = false;
@@ -50,7 +50,7 @@ let saving = false;
         
        } catch (err) {
    
-         toast.error('Delete failed');
+         toast.push('Delete failed');
        }
      }
    </script>

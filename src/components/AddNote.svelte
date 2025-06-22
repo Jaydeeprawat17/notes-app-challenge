@@ -1,5 +1,5 @@
 <script>
-  import toast from 'svelte-french-toast';
+   import { toast } from '@zerodevx/svelte-toast';
 
      export let onAdd;
      let title = '';

@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import NoteCard from './components/NoteCard.svelte';
   import AddNote from './components/AddNote.svelte';
-  import toast, { Toaster } from 'svelte-french-toast';
+  import { toast, SvelteToast } from '@zerodevx/svelte-toast';
   import { fade, slide } from 'svelte/transition';
 
 
@@ -25,7 +25,7 @@ onMount(async () => {
     const res = await fetch(API_URL);
     notes = await res.json();
   } catch (err) {
-    toast.error('Failed to fetch notes');
+    toast.push('Failed to fetch notes');
   } finally {
     loading = false;
   }
@@ -33,15 +33,15 @@ onMount(async () => {
 
   function addNoteToList(note) {
     notes = [note, ...notes]; 
-    toast.success('Note added!');
+   toast.push('Note added!');
   }
   function removeNoteFromList(id) {
   notes = notes.filter(note => note.id !== id);
-  toast.success('Note deleted!');
+  toast.push('Note deleted!');
 }
 function updateNoteInList(updatedNote) {
   notes = notes.map(note => note.id === updatedNote.id ? updatedNote : note);
-  toast.success('Note updated!');
+  toast.push('Note updated!');
 }
 
 
@@ -49,7 +49,7 @@ function updateNoteInList(updatedNote) {
 
 <main class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-6 max-w-3xl mx-auto">
 
-  <Toaster position="top-center" />
+  <SvelteToast />
   <div class="text-right mb-4">
     <button
       on:click={() => (dark = !dark)}
