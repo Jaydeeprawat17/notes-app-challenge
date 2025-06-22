@@ -14,7 +14,7 @@ All actions interact with a real mock API using `fetch`.
 
 ## 🚀 Live Demo
 
-(If deployed, add Netlify/Vercel link here)
+- https://notes-app-challenge-hu2z.vercel.app/
 
 ---
 
